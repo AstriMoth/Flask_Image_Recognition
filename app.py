@@ -1,6 +1,6 @@
 # Importing required libs
 from flask import Flask, render_template, request
-from flask_wtf.csrf import CSRFProtect
+from flask_wtf import CSRFProtect
 from model import preprocess_img, predict_result
 
 # Instantiating flask app
