@@ -1,10 +1,13 @@
 # Importing required libs
 from flask import Flask, render_template, request
+from flask_wtf.csrf import CSRFProtect
 from model import preprocess_img, predict_result
 
 # Instantiating flask app
 app = Flask(__name__)
-
+app.debug = False
+csrf = CSRFProtect()
+csrf.init_app(app)
 
 # Home route
 @app.route("/")
@@ -28,4 +31,4 @@ def predict_image_file():
 
 # Driver code
 if __name__ == "__main__":
-    app.run(port=9000, debug=True)
+    app.run(port=9000, debug=False)
