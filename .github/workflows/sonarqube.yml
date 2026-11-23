@@ -30,3 +30,4 @@ jobs:
           args: >
             -Dsonar.organization=astrimoth
             -Dsonar.projectKey=AstriMoth_Flask_Image_Recognition
+            -Dsonar.SonarSource=tests
